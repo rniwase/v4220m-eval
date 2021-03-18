@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:v4220m-eval-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -723,17 +722,6 @@ Wire Wire Line
 Wire Wire Line
 	4100 5300 5100 5300
 $Comp
-L power:GND #PWR037
-U 1 1 5BBE519F
-P 4400 4600
-F 0 "#PWR037" H 4400 4350 50  0001 C CNN
-F 1 "GND" H 4405 4427 50  0000 C CNN
-F 2 "" H 4400 4600 50  0001 C CNN
-F 3 "" H 4400 4600 50  0001 C CNN
-	1    4400 4600
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VDDF #PWR038
 U 1 1 5BBFEE1C
 P 5000 6300
@@ -865,8 +853,6 @@ F 3 "~" H 3950 3400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5200 4000 4400 4000
-Wire Wire Line
 	4200 3900 4200 3800
 Wire Wire Line
 	4200 3800 4100 3800
@@ -882,21 +868,6 @@ Wire Wire Line
 	4400 3700 4400 3400
 Wire Wire Line
 	4400 3400 4100 3400
-$Comp
-L Device:R R45
-U 1 1 5BD5268C
-P 4400 4350
-F 0 "R45" H 4470 4396 50  0000 L CNN
-F 1 "47kΩ" H 4470 4305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4330 4350 50  0001 C CNN
-F 3 "~" H 4400 4350 50  0001 C CNN
-	1    4400 4350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4400 4000 4400 4200
-Wire Wire Line
-	4400 4500 4400 4600
 Wire Wire Line
 	4800 4200 4800 4900
 Wire Wire Line
@@ -955,11 +926,6 @@ F 3 "~" H 13150 1250 50  0001 C CNN
 	1    13150 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4200 3900 5200 3900
-Connection ~ 4400 4000
-Wire Wire Line
-	4100 4000 4400 4000
 Wire Wire Line
 	1900 3600 3500 3600
 Wire Wire Line
@@ -1029,14 +995,13 @@ Connection ~ 4100 3800
 Wire Wire Line
 	3800 4000 4100 4000
 Connection ~ 3800 4000
-Connection ~ 4100 4000
 Text Label 2200 3400 0    50   ~ 0
 LRCK
 Text Label 2200 3500 0    50   ~ 0
 SCLK
-Text Label 2200 3600 0    50   ~ 0
-DIN
 Text Label 2200 3700 0    50   ~ 0
+DIN
+Text Label 2200 3600 0    50   ~ 0
 DOUT
 Wire Wire Line
 	6500 6800 6500 6900
@@ -1074,4 +1039,38 @@ NoConn ~ 6000 5100
 NoConn ~ 6100 5100
 NoConn ~ 6200 5100
 NoConn ~ 6300 5100
+Connection ~ 4100 4000
+Wire Wire Line
+	4100 4000 4400 4000
+Wire Wire Line
+	5200 4000 4400 4000
+Connection ~ 4400 4000
+Wire Wire Line
+	4200 3900 5200 3900
+Wire Wire Line
+	4400 4500 4400 4600
+Wire Wire Line
+	4400 4000 4400 4200
+$Comp
+L Device:R R45
+U 1 1 5BD5268C
+P 4400 4350
+F 0 "R45" H 4470 4396 50  0000 L CNN
+F 1 "47kΩ" H 4470 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4330 4350 50  0001 C CNN
+F 3 "~" H 4400 4350 50  0001 C CNN
+	1    4400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR037
+U 1 1 5BBE519F
+P 4400 4600
+F 0 "#PWR037" H 4400 4350 50  0001 C CNN
+F 1 "GND" H 4405 4427 50  0000 C CNN
+F 2 "" H 4400 4600 50  0001 C CNN
+F 3 "" H 4400 4600 50  0001 C CNN
+	1    4400 4600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
